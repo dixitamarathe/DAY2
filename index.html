@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day2 -My Constant&hearts;</title>
+
+    <!-- Link external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-1 fade-in">
+
+    <!-- PASSWORD PAGE (HIDDEN BY DEFAULT) -->
+    <div id="password-page" class="password-screen">
+        <div class="password-box slide-up">
+            <h2>Enter Password</h2>
+            <input type="password" id="passInput" placeholder="Password" />
+            <button onclick="checkPassword()">Unlock</button>
+            <p id="errorMsg"></p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT PAGE -->
+    <div id="main-page" class="main hidden">
+
+        <header>
+            <h1 id="dayName">MY CONSTANT</h1>
+            <h3 id="subtitle">Because no matter how life changes, his presence and love remain steady. ❤️</h3>
+        </header>
+
+        <section class="card slide-in">
+            <h2>🌟 Promise of Presence</h2>
+            <p id="promiseText">Promise to show up — not just physically, but emotionally and mentally, whenever you truly need me.</p>
+        </section>
+
+        <section class="card slide-in-delay">
+            <h2>💛 Why I Fall for You</h2>
+            <p id="reasonText">Tu Mala Pratek Vela Samjun Ghetos,Pratek Situation Madhe; You Are The Persona Who listens without judgement, accepts my emotions, and gets Me — that connection is rare.</p>
+        </section>
+
+
+        <section class="card slide-in-delay3">
+            <h2>📜 Long Message</h2>
+            <p id="messageText">Thank You...Thank you very much For Litsening my nonstop Bak Bak...Kay Mahit Bhai Kese Sehen karata hai Tu Mujhe...tula aathavat ka mi tula sangital hot ki Jo Pn Mulga majha Navara banel To Khataro Ke KHiladi Asel. Mala Navhat Mahit ki tu khataro ke khiladi banay sathi evdha prepare Rahshil..,But Thats My Boy I proude On You.</p>
+        </section>
+
+      <footer>I &hearts; You My प्रियतम.</footer>
+    </div>
+
+<script>
+// PASSWORD VALIDATION
+function checkPassword() {
+    const input = document.getElementById("passInput").value;
+    const error = document.getElementById("errorMsg");
+
+    if (input === "Narayan~30") {  // CHANGE PASSWORD IF YOU WANT
+        document.getElementById("password-page").classList.add("hidden");
+        document.getElementById("main-page").classList.remove("hidden");
+    } else {
+        error.textContent = "Incorrect password!";
+    }
+}
+</script>
+
+
+</body>
+</html>
