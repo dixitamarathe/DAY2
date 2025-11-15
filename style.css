@@ -1,36 +1,36 @@
 /* ===============================
-   GLOBAL VARIABLES (15 THEMES)
-   Change theme by setting body class="theme-X"
+   GLOBAL (Night Theme)
    =============================== */
 
 :root {
     --accent: #ffffff;
-    --bg1: #17c1ec;
-    --bg2: #3dd5ea;
+    --bg1: #0b0f17;
+    --bg2: #1a2333;
+    --neon: #16e0ff;
+    --glass: rgba(255,255,255,0.12);
+    --glass-border: rgba(255,255,255,0.18);
 }
 
-/* THEME 1 - Pink Love 
+/* Optional Love Theme (you can switch theme by adding class to body) */
 .theme-1 {
     --accent: #fff;
-    --bg1: #ff9a9e;
-    --bg2: #fad0c4;
+    --bg1: #1a0028;
+    --bg2: #3b0047;
+    --neon: #ff4df2;
 }
 
-/* THEME 2 - Purple Romance */
+/* Purple Romance Theme */
 .theme-2 {
     --accent: #fff;
-    --bg1: #a18cd1;
-    --bg2: #fbc2eb;
+    --bg1: #12001e;
+    --bg2: #3d0a5f;
+    --neon: #d278ff;
 }
-
-
-
-/* Add more themes up to theme-15 as needed */
-
 
 /* ===============================
    BODY + BACKGROUND
    =============================== */
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -40,7 +40,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.2);
     overflow-x: hidden;
 }
 
@@ -54,42 +55,58 @@ body {
 .password-screen {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.55);
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
 }
 
 .password-box {
-    background: rgba(255,255,255,0.2);
-    padding: 30px;
-    border-radius: 20px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 35px;
+    border-radius: 22px;
     text-align: center;
     width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: up 0.7s ease;
+}
+
+.password-box h2 {
+    margin-bottom: 10px;
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon);
 }
 
 .password-box input {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: none;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
     outline: none;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
 }
 
 .password-box button {
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 18px;
+    padding: 12px 22px;
     border: none;
-    background: #fff;
-    color: #333;
-    border-radius: 10px;
+    background: var(--neon);
+    color: #000;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 0 8px var(--neon);
 }
 
-#errorMsg { color: yellow; margin-top: 10px; }
+#errorMsg {
+    margin-top: 12px;
+    color: #ff6060;
+    font-weight: 500;
+}
 
 
 /* ===============================
@@ -98,37 +115,63 @@ body {
 
 header h1 {
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--neon);
+    text-shadow: 0 0 12px var(--neon);
 }
 
 header h3 {
-    margin: 5px 0 20px;
+    margin: 8px auto 20px;
     font-size: 1.1rem;
-    opacity: 0.8;
+    width: 90%;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.days-left {
+    background: var(--glass);
+    padding: 12px 22px;
+    border-radius: 14px;
+    margin: 12px auto 22px;
+    text-align: center;
+    width: fit-content;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 12px rgba(255,255,255,0.1);
+    border: 1px solid var(--glass-border);
+    color: var(--neon);
+    text-shadow: 0 0 8px var(--neon);
+    letter-spacing: 0.5px;
 }
 
 .card {
-    background: rgba(255,255,255,0.15);
-    padding: 20px;
-    border-radius: 20px;
-    margin: 15px 0;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    background: var(--glass);
+    padding: 22px;
+    border-radius: 22px;
+    margin: 18px 0;
+    backdrop-filter: blur(7px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    line-height: 1.55;
+    animation: fade 1.2s ease;
 }
 
-.buttons {
-    margin-top: 20px;
-    text-align: center;
-}
+
+/* ===============================
+   BUTTON
+   =============================== */
 
 .next {
-    padding: 12px 25px;
+    padding: 13px 26px;
     border: none;
-    background: #fff;
-    color: #444;
+    background: var(--neon);
+    color: #000;
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 12px var(--neon);
 }
 
 
