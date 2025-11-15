@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Day2 -My Constant&hearts;</title>
+    <title>Day 2 – My Constant ♥</title>
 
     <!-- Link external CSS file -->
     <link rel="stylesheet" href="style.css" />
 </head>
-<body class="theme-1 fade-in">
+<body class="theme-night fade-in">
 
-    <!-- PASSWORD PAGE (HIDDEN BY DEFAULT) -->
+    <!-- PASSWORD PAGE -->
     <div id="password-page" class="password-screen">
         <div class="password-box slide-up">
             <h2>Enter Password</h2>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT PAGE -->
+    <!-- MAIN CONTENT -->
     <div id="main-page" class="main hidden">
 
         <header>
@@ -28,23 +28,34 @@
             <h3 id="subtitle">Because no matter how life changes, his presence and love remain steady. ❤️</h3>
         </header>
 
+        <!-- DAYS REMAINING -->
+        <div class="days-left slide-in">
+            <p>⏳ 14 Days Remaining</p>
+        </div>
+
+        <!-- PROMISE -->
         <section class="card slide-in">
             <h2>🌟 Promise of Presence</h2>
             <p id="promiseText">Promise to show up — not just physically, but emotionally and mentally, whenever you truly need me.</p>
         </section>
 
+        <!-- REASON -->
         <section class="card slide-in-delay">
             <h2>💛 Why I Fall for You</h2>
-            <p id="reasonText">Tu Mala Pratek Vela Samjun Ghetos,Pratek Situation Madhe; You Are The Persona Who listens without judgement, accepts my emotions, and gets Me — that connection is rare.</p>
+            <p id="reasonText">Tu mala pratek vela samjun ghetos… tu jara hi judgement nahi karat. You listen, you understand, and that connection is rare.</p>
         </section>
 
+        
 
+        <!-- LONG MESSAGE -->
         <section class="card slide-in-delay3">
             <h2>📜 Long Message</h2>
-            <p id="messageText">Thank You...Thank you very much For Litsening my nonstop Bak Bak...Kay Mahit Bhai Kese Sehen karata hai Tu Mujhe...tula aathavat ka mi tula sangital hot ki Jo Pn Mulga majha Navara banel To Khataro Ke KHiladi Asel. Mala Navhat Mahit ki tu khataro ke khiladi banay sathi evdha prepare Rahshil..,But Thats My Boy I proude On You.</p>
+            <p id="messageText">Thank You... Thank you very much for listening to my nonstop bak bak. Kay mahit bhai kese sehan karta hai tu mujhe… .tula aathavat ka mi tula sangital hot ki Jo Pn Mulga majha Navara banel To Khataro Ke KHiladi Asel. Mala Navhat Mahit ki tu khataro ke khiladi banay sathi evdha prepare Rahshil. But that’s my boy. I’m proud of you, truly.</p>
         </section>
 
-      <footer>I &hearts; You My प्रियतम.</footer>
+        <footer>
+            <p>I ♥ You My प्रियतम.</p>
+        </footer>
     </div>
 
 <script>
@@ -53,7 +64,7 @@ function checkPassword() {
     const input = document.getElementById("passInput").value;
     const error = document.getElementById("errorMsg");
 
-    if (input === "Narayan~30") {  // CHANGE PASSWORD IF YOU WANT
+    if (input === "Narayan~30") {  // replace password here
         document.getElementById("password-page").classList.add("hidden");
         document.getElementById("main-page").classList.remove("hidden");
     } else {
@@ -61,7 +72,6 @@ function checkPassword() {
     }
 }
 </script>
-
 
 </body>
 </html>
